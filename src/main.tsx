@@ -14,6 +14,7 @@ import {
   Link,
 } from "react-router-dom";
 import Admin from "./pages/Admin";
+import Games from "./pages/Games";
 const client = new QueryClient();
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Admin />,
+  },
+  {
+    path: "/games",
+    element: <Games />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
