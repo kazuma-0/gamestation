@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": [
+    "main",
+    "admin-panel"
+  ],
+  "permissions": [
+    "core:default",
+    "shell:allow-open",
+    "core:webview:allow-create-webview-window",
+    "dialog:default",
+    "dialog:allow-open"
+  ]
+}
