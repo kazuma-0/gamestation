@@ -23,8 +23,7 @@
         "fullscreen": true,
         "visibleOnAllWorkspaces": true,
         "closable": false,
-        "maximized": true,
-        "contentProtected": true
+        "maximized": true
       }
     ],
     "security": {

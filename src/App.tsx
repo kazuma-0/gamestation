@@ -40,6 +40,7 @@ import { useToast } from "./hooks/use-toast";
 import client from "./lib/client";
 import { invoke } from "@tauri-apps/api/core";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const formSchema = z.object({
   userName: z.string().min(3, "Username is required"),
@@ -210,16 +211,18 @@ export default function LoginPage() {
               Admin Access
             </Button>
 
-            <Dialog>
+            <Link to={"/games"}>
+              <Button
+                variant="ghost"
+                className="w-full text-purple-100 hover:text-white hover:bg-white/10"
+                size="lg"
+                // disabled={isPending}
+              >
+                Admin Access
+              </Button>
+            </Link>
+            {/* <Dialog>
               <DialogTrigger className="w-full">
-                <Button
-                  variant="ghost"
-                  className="w-full text-purple-100 hover:text-white hover:bg-white/10"
-                  size="lg"
-                  disabled={isPending}
-                >
-                  Admin Access
-                </Button>
               </DialogTrigger>
               <DialogOverlay>
                 <DialogContent>
@@ -241,7 +244,7 @@ export default function LoginPage() {
                   </InputOTP>
                 </DialogContent>
               </DialogOverlay>
-            </Dialog>
+            </Dialog> */}
           </CardFooter>
         </Card>
       </motion.div>
